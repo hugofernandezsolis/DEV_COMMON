@@ -28,8 +28,6 @@ target_include_directories (
   ${COMPONENT_LIB}
     PUBLIC
       ${CMAKE_CURRENT_LIST_DIR}/include
-      ${CMAKE_CURRENT_LIST_DIR}/src
-      ${BOOST_INCLUDE_DIRS}
 )
 
 # Gather source files for the component library.
@@ -49,7 +47,7 @@ target_sources (
 # Link the needed libraries.
 target_link_libraries (
   ${COMPONENT_LIB}
-  ${BOOST_LIBRARIES}
+    ${BOOST_LIBRARIES}
 )
 
 # Add component tests

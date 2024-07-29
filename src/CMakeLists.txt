@@ -35,17 +35,13 @@ find_package(
 # Get a list of subdirectories in the current directory
 set (
   COMPONENTS
-  Logger
-)
-
-add_library (
-  ${PROJECT_NAME}
+    Logger
 )
 
 # Iterate over each subdirectory
 foreach(COMPONENT ${COMPONENTS})
   # Set the name of the component library.
-  set (COMPONENT_LIB ${COMPONENT}_lib)
+  set (COMPONENT_LIB ${COMPONENT})
   # Enter into the component
   add_subdirectory(${COMPONENT})
   # Link the new lib to the executable
